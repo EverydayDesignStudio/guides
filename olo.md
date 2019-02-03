@@ -1,4 +1,4 @@
-# [Olo Radio](http://willodom.com/portfolio/portfolio/olo-ongoingdesign/)
+# [Olo Radio 📻](http://willodom.com/portfolio/portfolio/olo-ongoingdesign/)
 <p align="center">
   <img src="images/olo/olo-front-view.jpg">
 </p>
@@ -33,4 +33,3 @@ For more information on the hardware components, I would advise on doing a web s
 
 ---
 **[Home](README.md)**
-
