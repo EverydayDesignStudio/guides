@@ -7,4 +7,4 @@
 |Vim | `sudo apt-get install vim`|
 
 ---
-**[Home]((README.md))**
+**[Home]((README.MD))**
