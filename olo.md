@@ -2,7 +2,9 @@
 <p align="center">
   <img src="images/olo/olo-front-view.jpg">
 </p>
+
 ---
+
 ### Hardware
 The purple OLO PCB (control board) connects the several hardware parts to the raspberry pi. These components are illustrated in figure 1. Make sure the board is connected to a 5V power source (min. 15W); the DC-DC converter (labelled ‘power supply’) in combination with the 9V 2A power adapter suffices. In figure 1, you can also see how these components are connected to the control board. Every white connector on the control board is labeled with white lettering on the board itself to denote what is connected to it. For the purpose of not mistaking the two, the power connector and the motor connector are a different type of connector. The volume knob and the three-pole switch though, are identical; so keep that in mind if you ever need to connect these.
 
