@@ -50,7 +50,8 @@ The RPi also has VNC software installed. In case you require the desktop environ
 ---
 
 ### Programs to Install
-Here's a few recommended programs to remember to install
+_Here's a few recommended programs to remember to install_
+
 | Program| Link / Code|
 |--------|------------|
 |Processing | https://pi.processing.org|
