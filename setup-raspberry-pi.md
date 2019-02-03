@@ -1,4 +1,4 @@
-# Setting up a Raspberry Pi 🥧
+# Setup a Raspberry Pi 🥧
 
 ### Quick Overview
 You can use a Raspberry Pi (RPi for short) basically like any other desktop computer. The first time you boot the RPi, you will need to install an OS, which is all explained pretty comprehensively on the RPi website (linked below). Most recent projects in EDS, have used [`Raspbian`](https://www.raspbian.org).
@@ -61,4 +61,4 @@ _Here's a few recommended programs to remember to install_
 >In the past I’ve edited code on the RPi (i.e. not headless, but while connecting the RPi to a display, keyboard and mouse). This is also possible, but the code editor on the RPi does not come close to the code editor you’re using on your laptop in terms of ease of use. Besides, the RPi is a somewhat slow computer, so typing can lag behind. - Tal Amram
 
 ---
-**[Home](README.md)**
+**[Home](README.md)** | **[Setup eduroam on RPi 3](setup-eduroam-raspberry-pi-3.md)**
