@@ -51,7 +51,6 @@ network={
 	pairwise=CCMP
 	key_mgmt=WPA-EAP 
 }
-" (without these quotes. Leave quotes around identity, password, ssid, and phase2)
 ```
 _leave quotes around the `identity`, `password`, `ssid`, and `phase2`_
 
