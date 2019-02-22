@@ -22,7 +22,7 @@ If the IP were ever to change, you can always find it using this method.
 ### Controlling over SSH
 You can run the RPi in what is called a ‘headless’ mode. This means no screen, no keyboard and mouse or other conventional control peripherals. In order to control the RPi in this manner, you can connect to it over SSH. Most RPis the studio is using has an onboard WiFi antenna and is capable of connecting to the studio’s wireless network. 
 
-1. In order to connect to the RPi over SSH you first need to make sure _your laptop_ and the _RPI_ is connected to the same wireless network: `eds5g` password: `DesignStudio2016`.
+1. In order to connect to the RPi over SSH you first need to make sure _your laptop_ and the _RPI_ is connected to the same wireless network. Because eduroam and SFUNET-SECURE require extra steps, the easiest choice is eds2g or eds5g when working in the studio. 
 
 2. Back on your laptop open up a Linux terminal and type the following command and hit enter: <br>
 `ssh pi@192.168.0.101` (where _192.168.0.101_ is the IP address of your specific RPi). If you don't know your RPi's IP, [see above](#finding-rpi-ip-address).
