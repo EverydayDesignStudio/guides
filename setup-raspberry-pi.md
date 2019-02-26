@@ -1,12 +1,16 @@
 # Setup a Raspberry Pi 🥧
-
+-
 ### Quick Overview
 You can use a Raspberry Pi (RPi for short) basically like any other desktop computer. The first time you boot the RPi, you will need to install an OS, which is all explained pretty comprehensively on the RPi website (linked below). Most recent projects in EDS, have used [`Raspbian`](https://www.raspbian.org).
 If you connect a display, a keyboard and a mouse to the RPi, it practically is a desktop computer (albeit a little slower than today’s standard).
 
 ### SD Card
+
+**Recommended SD Card:**[`Samsung 64GB EVO Plus`](https://www.amazon.ca/Samsung-Class-Adapter-MB-MC64DA-AM/dp/B01273JZMG/ref=sr_1_1_sspa?ie=UTF8&qid=1549166261&sr=8-1-spons&keywords=samsung+evo+plus+64gb&psc=1)
+
 Note that the operating system is run off of the micro SD card. Hence the read/write speeds are crutial. Tal and Jordan found [this comparison](https://www.jeffgeerling.com/blog/2018/raspberry-pi-microsd-card-performance-comparison-2018) helpful when deciding which card to buy. <br>
-Recommended SD Card: [`Samsung 64GB EVO Plus`](https://www.amazon.ca/Samsung-Class-Adapter-MB-MC64DA-AM/dp/B01273JZMG/ref=sr_1_1_sspa?ie=UTF8&qid=1549166261&sr=8-1-spons&keywords=samsung+evo+plus+64gb&psc=1)
+
+If you are using an SD card larger than 32GB, the setup has a [formatting difference.](https://www.raspberrypi.org/documentation/installation/sdxc_formatting.md)
 
 ### OS Installation
 [`Comprehensive tutorial from Raspberrypi.org`](https://projects.raspberrypi.org/en/projects/raspberry-pi-setting-up)<br>
@@ -57,8 +61,22 @@ _Here's a few recommended programs to remember to install_
 |Processing | https://pi.processing.org|
 |Vim | `sudo apt-get install vim`|
 
-### Programming for the RPi
+---
+
+### Programming the RPi
 >In the past I’ve edited code on the RPi (i.e. not headless, but while connecting the RPi to a display, keyboard and mouse). This is also possible, but the code editor on the RPi does not come close to the code editor you’re using on your laptop in terms of ease of use. Besides, the RPi is a somewhat slow computer, so typing can lag behind. - Tal Amram
+
+### IO Programming
+```python
+import RPi.GPIO as gpio
+
+gpio.setmode(gpio.BCM)
+gpio.setup(24, gpio.OUT)
+gpio.output(24, True)
+```
+Save As: `foo.py` <br>
+Run: `python3 ./foo.py`
+
 
 ---
 **[Home](README.md)** | **[Setup eduroam on RPi 3](setup-eduroam-raspberry-pi-3.md)**
