@@ -1,6 +1,6 @@
 # Setup eduroam on Raspberry Pi 3 🌐
 
->Created by:​ Ivan Aguilar <br>
+>Created by:​ [Ivan Aguilar](http://ispace.iat.sfu.ca/person/ivan-aguilar/) | [iSpace Lab](http://ispace.iat.sfu.ca) <br>
 >Date:​ January 16, 2019 <br>
 >Device:​ Raspberry Pi 3 <br>
 >Operating System:​ Raspbian
@@ -37,12 +37,12 @@ iface default inet dhcp
 
 ```
 ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev update_config=1
-country=CA
+country=your_country_abbreviation
 
 network={ 
 	ssid="eduroam"
 	
-	identity="your_login_info@sfu.ca" 
+	identity="your_login_info@institutional_email_domain"
 	password="your_password"
 	
 	eap=TTLS 
@@ -52,6 +52,10 @@ network={
 	key_mgmt=WPA-EAP 
 }
 ```
+If you are at SFU: <br>
+`your_country_abbreviation` = `CA`
+`@institutional_email_domain` = `@sfu.ca`
+
 _leave quotes around the `identity`, `password`, `ssid`, and `phase2`_
 
 10. Save file
@@ -89,8 +93,18 @@ wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf
 ```
 ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
 update_config=1
-country=CA
+country=your_country_abbreviation
 ```
+If you are at SFU: <br>
+`your_country_abbreviation` = `CA`
+
+
+### Additional Instructions
+I based this documentation off of these sites, with some modifications to them. Might be relevant to someone who reads the documentation and if it doesn't work. In our case (SFU) IT told me to use TTLS eap setup, which is why these other documentations didn't  work. But if the person is trying to do it in another institution our country their eap might not be TTLS and it won't work, they would need to follow a different documentation, like one of these below, which use PEAP.
+
+* [https://www.raspberrypi.org/forums/viewtopic.php?t=86253](https://www.raspberrypi.org/forums/viewtopic.php?t=86253)
+* [https://www.instructables.com/id/Access-Eduroam-on-a-Raspberry-Pi-in-Cambridge/](https://www.instructables.com/id/Access-Eduroam-on-a-Raspberry-Pi-in-Cambridge/)
+
 
 ---
 **[Home](README.md)** | **[Setup a Raspberry Pi](setup-raspberry-pi.md)**
