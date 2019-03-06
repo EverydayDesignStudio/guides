@@ -1,5 +1,5 @@
-# [Olo Radio 📻](http://willodom.com/portfolio/portfolio/olo-ongoingdesign/)
-![olo radio front view](images/olo/olo-front-view.jpg)
+# [olo radio 📻](http://willodom.com/portfolio/portfolio/olo-ongoingdesign/)
+![olo radio front view](images/olo/olo-front-view.png)
 
 ---
 
