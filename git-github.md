@@ -61,6 +61,17 @@ Below are some great tutorials to learn the basics.
 * [GitHub Guides: Hello World](https://guides.github.com/activities/hello-world/)
 * [Learn Git Branching](https://learngitbranching.js.org)
 
+## Register a Public SSH Key
+
+You must create a public SSH key and register the key to your Github account to be able to clone, pull or push. 
+
+* [Generate SSH key](https://stackoverflow.com/questions/2643502/how-to-solve-permission-denied-publickey-error-when-using-git)<br>
+    * If you don't have .ssh folder on your machine, create an empty folder: `mkdir ~/.ssh | chmod 700 ~/.ssh`. 
+* [Register a new key on Github](https://help.github.com/en/enterprise/2.16/user/articles/adding-a-new-ssh-key-to-your-github-account)
+
+
+Thats it! You should be good to clone and checkout.
+
 
 ---
 **[Home](README.md)** | * **[Markdown](markdown.md)**
