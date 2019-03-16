@@ -25,7 +25,6 @@ After signing up, email [jordan_white@sfu.ca](mailto:jordan_white@sfu.ca) your u
 You can edit the [Guides](README.md) from the web interface. However, the full power of GitHub is using it to keep track of changes to files on your local system and collaborately working on the same project with other people.
 
 ### Installing Git
--
 First you need to download a program called Git onto your computer. Git is the underlying technology that GitHub is built on top. It was developed by the legendary [Linus Torvalds](https://en.wikipedia.org/wiki/Linus_Torvalds), the same fellow who wrote the Linux kernel.
 
 Below are steps for both Mac and Windows on how to install Git along with accompanying GUI software to makde it easier to use.
@@ -66,13 +65,13 @@ Below are some great tutorials to learn the basics.
 You must create a public SSH key and register the key to your Github account to be able to clone, pull or push. 
 
 * [Generate SSH key](https://stackoverflow.com/questions/2643502/how-to-solve-permission-denied-publickey-error-when-using-git)<br>
-    * If you don't have .ssh folder on your machine, create an empty folder: `mkdir ~/.ssh | chmod 700 ~/.ssh`. 
+    * If you don't have a .ssh folder on your machine, create an empty folder: `mkdir ~/.ssh | chmod 700 ~/.ssh`. 
 * [Register a new key on Github](https://help.github.com/en/enterprise/2.16/user/articles/adding-a-new-ssh-key-to-your-github-account)
-
+	* Then run: `ssh -T git@github.com` to test your new SSH connection with GitHub.
 
 Thats it! You should be good to clone and checkout.
 
 
 ---
-**[Home](README.md)** | * **[Markdown](markdown.md)**
+**[Home](README.md)** | **[Markdown](markdown.md)**
 
