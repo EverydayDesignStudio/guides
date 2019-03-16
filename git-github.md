@@ -1,8 +1,6 @@
 # Learning Git / GitHub 🐙🐱
 
-[`EDS Github Organization`](https://github.com/everydaydesignstudio)
-
--
+#####[EDS GitHub Organization](https://github.com/everydaydesignstudio)
 
 ## Overview
 > Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.<br>
@@ -62,15 +60,14 @@ Below are some great tutorials to learn the basics.
 
 ## Register a Public SSH Key
 
-You must create a public SSH key and register the key to your Github account to be able to clone, pull or push. 
+You must create a public SSH key and register the key to your Github account to be able to clone, pull or push without having to enter your username and password each time.
 
-* [Generate SSH key](https://stackoverflow.com/questions/2643502/how-to-solve-permission-denied-publickey-error-when-using-git)<br>
+* [GitHub Help: Generating a new SSH key](https://help.github.com/en/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
     * If you don't have a .ssh folder on your machine, create an empty folder: `mkdir ~/.ssh | chmod 700 ~/.ssh`. 
 * [Register a new key on Github](https://help.github.com/en/enterprise/2.16/user/articles/adding-a-new-ssh-key-to-your-github-account)
 	* Then run: `ssh -T git@github.com` to test your new SSH connection with GitHub.
 
 Thats it! You should be good to clone and checkout.
-
 
 ---
 **[Home](README.md)** | **[Markdown](markdown.md)**
