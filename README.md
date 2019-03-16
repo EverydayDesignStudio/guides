@@ -18,5 +18,8 @@ _A collection of setup guides, tutorials, and how-tos on and about our research 
 ### Products
 * **[olo radio](olo.md)**
 
+### Safety
+* **[Safety](safety.md)**
+
 ---
 **[Home](README.md)**
