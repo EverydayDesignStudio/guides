@@ -77,6 +77,14 @@ gpio.output(24, True)
 Save As: `foo.py` <br>
 Run: `python3 ./foo.py`
 
+---
+
+### Helpful Commands
+|What|Command|
+|----|-------|
+|Shutdown|`sudo shutdown -h now`|
+|Reboot|`sudo reboot`|
+
 
 ---
 **[Home](README.md)** | **[Setup eduroam on RPi 3](setup-eduroam-raspberry-pi-3.md)** | **[Raspberry Pi Advanced](raspberry-advanced.md)**
