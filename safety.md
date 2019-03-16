@@ -7,7 +7,7 @@
 
 ## Equipment
 
-###Respirators
+### Respirators
 ![Stanley R95 Organic Respirator photo](images/safety/respirator-P100.png)
 
 **Recommended:**
