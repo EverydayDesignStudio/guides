@@ -54,12 +54,13 @@ The RPi also has VNC software installed. In case you require the desktop environ
 ---
 
 ### Programs to Install
-_Here's a few recommended programs to remember to install_
+_Here's a few recommended programs consider installing_
 
 | Program| Link / Code|
 |--------|------------|
 |Processing | https://pi.processing.org|
 |Vim | `sudo apt-get install vim`|
+|xscreensaver | `sudo apt-get install xscreensaver`|
 
 ---
 
