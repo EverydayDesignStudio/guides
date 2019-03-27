@@ -7,6 +7,7 @@ _A collection of setup guides, tutorials, and how-tos on and about our research 
 
 ### Learning
 * **[Git / Github](git-github.md)**
+* **[Git Commands](git-commands.md)**
 * **[Markdown](markdown.md)**
 * **[Basic Electronics](basic-electronics.md)**
 

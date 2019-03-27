@@ -70,5 +70,5 @@ You must create a public SSH key and register the key to your Github account to 
 Thats it! You should be good to clone and checkout.
 
 ---
-**[Home](README.md)** | **[Markdown](markdown.md)**
+**[Home](README.md)** | **[Git Commands](git-commands.md)** | **[Markdown](markdown.md)**
 
