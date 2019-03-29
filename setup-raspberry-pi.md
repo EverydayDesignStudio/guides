@@ -60,6 +60,7 @@ _Here's a few recommended programs consider installing_
 |--------|------------|
 |Processing | https://pi.processing.org|
 |Vim | `sudo apt-get install vim`|
+|[xclip](https://coderwall.com/p/oaaqwq/pbcopy-on-ubuntu-linux)|`sudo apt-get install -y xclip`|
 |xscreensaver | `sudo apt-get install xscreensaver`|
 
 ---
