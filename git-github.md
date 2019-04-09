@@ -66,8 +66,10 @@ You must create a public SSH key and register the key to your Github account to 
     * If you don't have a .ssh folder on your machine, create an empty folder: `mkdir ~/.ssh | chmod 700 ~/.ssh`. 
 * [Register a new key on Github](https://help.github.com/en/enterprise/2.16/user/articles/adding-a-new-ssh-key-to-your-github-account)
 	* Then run: `ssh -T git@github.com` to test your new SSH connection with GitHub.
+* If you are [still prompted for a username and password](https://stackoverflow.com/questions/6565357/git-push-requires-username-and-password) when trying to push or pull, you need to change the repo's remote url if you originally cloned using HTTPS instead of SSH.
+	* Run: `git remote set-url origin git@github.com:username/repo.git` inside the repo.
 
-Thats it! You should be good to clone and checkout.
+Thats it! You should be good to clone, push, pull, and checkout.
 
 ---
 **[Home](README.md)** | **[Git Commands](git-commands.md)** | **[Markdown](markdown.md)**
