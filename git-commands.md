@@ -7,6 +7,8 @@
 
 |Command| Command|
 |--------|------------|
+|`git branch <new-branch-name>` | create a new branch from the current branch|
+|`git checkout <sha-1 of that commit>` | temporarily revert to previous commit|
 |`git status` | view the status of the git repository (repo)|
 
 ---
