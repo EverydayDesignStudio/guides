@@ -55,6 +55,9 @@ The RPi also has VNC software installed. In case you require the desktop environ
 
 4. It should connect and you will be able to see the desktop of the RPi on your laptop.
 
+#### Connecting to Pi over Cloud (on VNC)
+Follow [this](https://lifehacker.com/how-to-control-a-raspberry-pi-remotely-from-anywhere-in-1792892937) instruction to create a VNC cloud account and list devices under the account to get cloud access to Pi from anywhere. 
+
 ---
 
 ### Programs to Install
