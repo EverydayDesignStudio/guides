@@ -12,7 +12,7 @@ Note that the operating system is run off of the micro SD card. Hence the read/w
 
 If you are using an SD card larger than 32GB, the setup has a [formatting difference.](https://www.raspberrypi.org/documentation/installation/sdxc_formatting.md)
 
-**Cloning SD Card (On Windows)**: For various purposes, such as creating a backup image or making multiple copies of the current state of Raspberry Pi, follow [this guide](https://www.howtogeek.com/341944/how-to-clone-your-raspberry-pi-sd-card-for-foolproof-backup/) to make clones of SD Cards.
+**Cloning SD Card (On Windows)**: For various purposes, such as creating a backup image or making multiple copies of the current state of Raspberry Pi, follow [this guide](https://www.howtogeek.com/341944/how-to-clone-your-raspberry-pi-sd-card-for-foolproof-backup/) to make clones of SD Cards. **Make sure you have enough storage space when making an image of the SD card!** For example, even if there are 3Gb data in 32Gb SD Card, you still need to have more than 32Gb storage space on your machine. 
 
 **Accessing Files on RPi from Windows**: Use [this](https://www.diskgenius.com/how-to/ext4-windows.php#Read_write_EXT4_partition_in_Windows) freeware to read/write files on RPi from Windows.
 
