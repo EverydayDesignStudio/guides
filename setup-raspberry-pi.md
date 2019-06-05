@@ -22,8 +22,14 @@ If you already know how to do this and just need the link: [`NOOBS`](https://www
 
 
 ### Finding RPi IP Address
-On the RPi find the IP address by opening up a terminal and typing: `ping raspberrypi` <br> 
-If the IP were ever to change, you can always find it using this method.
+On the RPi find the IP address by opening up a terminal and typing: `ifconfig`. Under **wlan0** you will find the IP address. <br>It will look something like this <br>
+```
+...
+wlan0: flags=8863<UP,BROADCAST,SMART,RUNNING,SIMPLEX,MULTICAST> mtu 1500
+        inet 192.168.0.104 netmask 0xffffff00 broadcast 192.168.0.255
+...
+```
+If the IP were to change, you can find it again using this method.
 
 ---
 
@@ -70,6 +76,12 @@ _Here's a few recommended programs consider installing_
 |[xclip](https://coderwall.com/p/oaaqwq/pbcopy-on-ubuntu-linux)|`sudo apt-get install -y xclip`|
 |xscreensaver | `sudo apt-get install xscreensaver`|
 
+
+### Update Python version
+All new projects should start with at least Python 3.7.x. If you aren't sure the version on your machine, you can run `python3 --version` to check.<br>
+[Instructions to update Python version](https://installvirtual.com/install-python-3-7-on-raspberry-pi/)
+`
+
 ---
 
 ### Programming the RPi
@@ -91,6 +103,7 @@ Run: `python3 ./foo.py`
 ### Helpful Commands
 |What|Command|
 |----|-------|
+|Python version|`python --version`|
 |Shutdown|`sudo shutdown -h now`|
 |Reboot|`sudo reboot`|
 
