@@ -108,6 +108,8 @@ Run: `python3 ./foo.py`
 |Python version|`python --version`|
 |Shutdown|`sudo shutdown -h now`|
 |Reboot|`sudo reboot`|
+|View python scripts running|`pgrep -af python`|
+|[Kill process](https://www.linux.com/learn/intro-to-linux/2017/5/how-kill-process-command-line)|`sudo kill -9 [pid]`|
 
 
 ---
