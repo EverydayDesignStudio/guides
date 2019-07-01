@@ -1,4 +1,4 @@
-# [olo radio 📻](http://willodom.com/portfolio/portfolio/olo-ongoingdesign/)
+# [olo radio 📻](http://oloradio.com)
 ![olo radio front view](images/olo/olo-front-view.png)
 
 ---
@@ -30,4 +30,4 @@ The latter simply calls a function inside sh.py that initializes all global vari
 For more information on the hardware components, I would advise on doing a web search on the parts’ model number. Datasheets of the ALPS motor-fader and most components that are on the OLO board can be found in the olo folder on the EDS dropbox.
 
 ---
-**[Home](README.md)**
+**[Home](README.md)** | **[Capra](capra.md)**
