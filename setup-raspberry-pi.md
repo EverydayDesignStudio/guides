@@ -72,10 +72,12 @@ _Here's a few recommended programs consider installing_
 | Program| Link / Code|
 |--------|------------|
 |Processing | https://pi.processing.org|
+|[SQLite Browser](https://sqlitebrowser.org) | `sudo apt-get install sqlitebrowser`|
 |Vim | `sudo apt-get install vim`|
 |[xclip](https://coderwall.com/p/oaaqwq/pbcopy-on-ubuntu-linux)|`sudo apt-get install -y xclip`|
 |xscreensaver | `sudo apt-get install xscreensaver`|
 
+---
 
 ### Update Python version
 All new projects should start with at least Python 3.7.x. If you aren't sure the version on your machine, you can run `python3 --version` to check.<br>
