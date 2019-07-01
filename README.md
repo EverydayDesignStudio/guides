@@ -15,7 +15,7 @@ _A collection of setup guides, tutorials, and how-tos on and about our research 
 * **[Setup a Raspberry Pi](setup-raspberry-pi.md)**
 * **[Setup eduroam on Raspberry Pi 3](setup-eduroam-raspberry-pi-3.md)**
 * **[Raspberry Pi Advanced](raspberry-advanced.md)**
-* **[Running code when the Raspberry pi starts up (script-on-startup.md)]
+* **[Running code when the Raspberry pi starts up](script-on-startup.md)**
 
 ### Products
 * **[olo radio](olo.md)**
