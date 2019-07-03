@@ -40,8 +40,9 @@ The permission on the unit file needs to be set to 644 :
 
 Now the unit file has been defined we can tell systemd to start it during the boot sequence :
 
-`sudo systemctl daemon-reload
-sudo systemctl enable sample.service`
+`sudo systemctl daemon-reload`
+
+`sudo systemctl enable sample.service`
 
 Reboot the Pi and your custom service should run:
 
