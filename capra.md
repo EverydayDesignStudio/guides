@@ -8,7 +8,11 @@
 There is a RealVNC Capra group for connecting to both the cameras and projectors remotely. Login details can be found in the Dropbox.
 
 ## Collector
-The timelapse program is started on power up by a service. It can be found at: `/lib/systemd/system/capra-startup.service`
+
+### Services
+The timelapse program is started on power up by the service: `/lib/systemd/system/capra-startup.service`
+
+The (on/off) button is controlled by the service: `/lib/systemd/system/capra-listen-for-shutdown.service`
 
 ## Explorer
 
