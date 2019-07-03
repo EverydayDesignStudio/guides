@@ -17,6 +17,9 @@ _A collection of setup guides, tutorials, and how-tos on and about our research 
 * **[Raspberry Pi Advanced](raspberry-advanced.md)**
 * **[Running code when the Raspberry pi starts up](script-on-startup.md)**
 
+### Python
+* **[Python](python.md)**
+
 ### Products
 * **[olo radio](olo.md)**
 * **[Capra](capra.md)**
