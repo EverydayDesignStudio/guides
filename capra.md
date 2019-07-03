@@ -14,6 +14,12 @@ The timelapse program is started on power up by the service: `/lib/systemd/syste
 
 The (on/off) button is controlled by the service: `/lib/systemd/system/capra-listen-for-shutdown.service`
 
+### LED Meanings
+| LED   | Meaning |
+| ------|:-------|
+| 🔵 solid | Adafruit power board is connected 
+| 🔴 blinking   | collector.py is PAUSED  |
+
 ## Explorer
 
 
