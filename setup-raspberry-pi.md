@@ -121,6 +121,7 @@ Run: `python3 ./foo.py`
 |Reboot|`sudo reboot`|
 |View python scripts running|`pgrep -af python`|
 |[Kill process](https://www.linux.com/learn/intro-to-linux/2017/5/how-kill-process-command-line)|`sudo kill -9 [pid]`|
+|[Set WiFi Network Passwords](https://www.raspberrypi.org/documentation/configuration/wireless/wireless-cli.md)|`sudo vim /etc/wpa_supplicant/wpa_supplicant.conf`|
 
 
 ---
