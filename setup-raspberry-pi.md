@@ -12,7 +12,7 @@ Note that the operating system is run off of the micro SD card. Hence the read/w
 
 If you are using an SD card larger than 32GB, the setup has a [formatting difference.](https://www.raspberrypi.org/documentation/installation/sdxc_formatting.md)
 
-**Cloning SD Card (On Windows)**: For various purposes, such as creating a backup image or making multiple copies of the current state of Raspberry Pi, follow [this guide](https://www.howtogeek.com/341944/how-to-clone-your-raspberry-pi-sd-card-for-foolproof-backup/) to make clones of SD Cards. **Make sure you have enough storage space when making an image of the SD card!** For example, even if there are 3Gb data in 32Gb SD Card, you still need to have more than 32Gb storage space on your machine. 
+**Cloning SD Card (On Windows)**: For various purposes, such as creating a backup image or making multiple copies of the current state of Raspberry Pi, follow [this guide](https://www.howtogeek.com/341944/how-to-clone-your-raspberry-pi-sd-card-for-foolproof-backup/) to make clones of SD Cards. **Make sure you have enough storage space when making an image of the SD card!** For example, even if there are 3Gb data in 32Gb SD Card, you still need to have more than 32Gb storage space on your machine.
 
 **Accessing Files on RPi from Windows**: Use [this](https://www.diskgenius.com/how-to/ext4-windows.php#Read_write_EXT4_partition_in_Windows) freeware to read/write files on RPi from Windows.
 
@@ -34,9 +34,9 @@ If the IP were to change, you can find it again using this method.
 ---
 
 ### Controlling over SSH
-You can run the RPi in what is called a ‘headless’ mode. This means no screen, no keyboard and mouse or other conventional control peripherals. In order to control the RPi in this manner, you can connect to it over SSH. Most RPis the studio is using has an onboard WiFi antenna and is capable of connecting to the studio’s wireless network. 
+You can run the RPi in what is called a ‘headless’ mode. This means no screen, no keyboard and mouse or other conventional control peripherals. In order to control the RPi in this manner, you can connect to it over SSH. Most RPis the studio have an onboard WiFi antenna and are capable of connecting to the studio’s wireless network (eds2g or Morse Things network).
 
-1. In order to connect to the RPi over SSH you first need to make sure _your laptop_ and the _RPI_ is connected to the same wireless network. Because eduroam and SFUNET-SECURE require extra steps, the easiest choice is eds2g or eds5g when working in the studio. 
+1. In order to connect to the RPi over SSH you first need to make sure _your laptop_ and the _RPI_ are connected to the same wireless network. Because eduroam and SFUNET-SECURE require extra steps, the easiest choice is eds2g or eds5g when working in the studio.
 
 2. Back on your laptop open up a Linux terminal and type the following command and hit enter: <br>
 `ssh pi@192.168.0.101` (where _192.168.0.101_ is the IP address of your specific RPi). If you don't know your RPi's IP, [see above](#finding-rpi-ip-address).
@@ -62,7 +62,18 @@ The RPi also has VNC software installed. In case you require the desktop environ
 4. It should connect and you will be able to see the desktop of the RPi on your laptop.
 
 #### Connecting to Pi over Cloud (on VNC)
-Follow [this](https://lifehacker.com/how-to-control-a-raspberry-pi-remotely-from-anywhere-in-1792892937) instruction to create a VNC cloud account and list devices under the account to get cloud access to Pi from anywhere. 
+Follow [this](https://lifehacker.com/how-to-control-a-raspberry-pi-remotely-from-anywhere-in-1792892937) instruction to create a VNC cloud account and list devices under the account to get cloud access to Pi from anywhere.
+
+### Creating unique names for RPi's
+When working remotely frequently with multiple RPi's, it might be advisable to give the RPi's unique names. This means seeing:
+_pi@capra-collector1_
+ in the terminal instead of the default:
+_pi@raspberrypi_
+
+This is done simply by opening the terminal in Raspbian (or connecting over SSH) and typing _sudo raspi-config_, followed by pressing enter. You now get a menu that looks like this:
+![raspi-config menu](https://www.raspberrypi.org/documentation/configuration/images/raspi-config.png)
+
+Use the arrow keys to choose Network Options, and then change the hostname. The RPi will have to reboot after changing the hostname but will then show up with the name in the terminal.
 
 ---
 
