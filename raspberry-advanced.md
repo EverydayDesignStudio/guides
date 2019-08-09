@@ -17,4 +17,4 @@ Upon running the program again, it will launch.
 See [this guide](https://raspberrypi.stackexchange.com/questions/499/how-can-i-resize-my-root-partition), if you need to allocate more memory to the root partition. 
 
 ---
-**[Home](README.md)** | **[Setup a Raspberry Pi](setup-raspberry-pi.md)** | **[Setup eduroam on RPi 3](setup-eduroam-raspberry-pi-3.md)**
+**[Home](README.md)** | **[Raspberry Pi Introduction](raspberry-pi-introduction.md)** | **[Setup eduroam on RPi 3](setup-eduroam-raspberry-pi-3.md)**

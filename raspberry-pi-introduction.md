@@ -1,4 +1,4 @@
-# Setup a Raspberry Pi 🥧
+# Raspberry Pi Introduction 🥧
 
 ### Quick Overview
 You can use a Raspberry Pi (RPi for short) basically like any other desktop computer. The first time you boot the RPi, you will need to install an OS, which is all explained pretty comprehensively on the RPi website (linked below). Most recent projects in EDS, have used [`Raspbian`](https://www.raspbian.org).

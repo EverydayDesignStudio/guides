@@ -107,4 +107,4 @@ I based this documentation off of these sites, with some modifications to them. 
 
 
 ---
-**[Home](README.md)** | **[Setup a Raspberry Pi](setup-raspberry-pi.md)** | **[Raspberry Pi Advanced](raspberry-advanced.md)**
+**[Home](README.md)** | **[Raspberry Pi Introduction](raspberry-pi-introduction.md)** | **[Raspberry Pi Advanced](raspberry-advanced.md)**

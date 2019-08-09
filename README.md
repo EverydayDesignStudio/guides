@@ -12,7 +12,7 @@ _A collection of setup guides, tutorials, and how-tos on and about our research 
 * **[Basic Electronics](basic-electronics.md)**
 
 ### Raspberry Pi
-* **[Setup a Raspberry Pi](setup-raspberry-pi.md)**
+* **[Raspberry Pi Introduction](raspberry-pi-introduction.md)**
 * **[Setup eduroam on Raspberry Pi 3](setup-eduroam-raspberry-pi-3.md)**
 * **[Raspberry Pi Advanced](raspberry-advanced.md)**
 * **[Running code when the Raspberry pi starts up](script-on-startup.md)**

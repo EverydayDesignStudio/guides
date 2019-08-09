@@ -46,3 +46,6 @@ sudo systemctl enable sample.service`
 Reboot the Pi and your custom service should run:
 
 `sudo reboot`
+
+---
+**[Home](README.md)** | **[Raspberry Pi Introduction](raspberry-pi-introduction.md)** | **[Raspberry Pi Advanced](raspberry-advanced.md)** | **[Setup eduroam on RPi 3](setup-eduroam-raspberry-pi-3.md)**
