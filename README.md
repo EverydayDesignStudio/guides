@@ -10,6 +10,7 @@ _A collection of setup guides, tutorials, and how-tos on and about our research 
 * **[Git Commands](git-commands.md)**
 * **[Markdown](markdown.md)**
 * **[Basic Electronics](basic-electronics.md)**
+* **[EDS Eagle Library](https://github.com/EverydayDesignStudio/EDS-Eagle-Library)**
 
 ### Raspberry Pi
 * **[Raspberry Pi Introduction](raspberry-pi-introduction.md)**
