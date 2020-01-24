@@ -1,24 +1,48 @@
 # Raspberry Pi Real Time Clock 🥧🕰
 
 ## Quick Overview
-Due to the nature of the Raspberry Pi being a very cheap and economical microcontroller, it does not have all the features you may expect. One is that there is not a RTC (real time clock). This means that each time the Pi turns on it syncs the system clock via the internet. 
+Due to the nature of the Raspberry Pi being a very cheap and economical microcontroller, it does not have all the features you may expect. One is that there is not a RTC (real time clock). This means that each time the Pi turns on it sets it's time from the global ntp (nework time protocol) servers. The system clock is not maintained from a chip on the Pi.
 
-However, what happens if you are building a device such as Capra? Well, what happens is that it gets out of sync. The solution is that you need a real time
+This is all fine and dangy when you are running a Pi which will always be connected to the internet. However, what happens if you are building a device such as Capra, which will be turning on and off outside of the range of WiFi networks for multiple days? The time won't be updated and will get out of sync with what the actual time is. The solution to this problem is to add a RTC to the Pi.
 
 ## Real Time Clock Options
 
-**[DS3231 on Adafruit]()**
+* DS3231 - most accurate 
+* DS1307 - most common
+* PCF8523 - cheapest
+
+[All 3 options on Adafruit](https://learn.adafruit.com/adding-a-real-time-clock-to-raspberry-pi/wiring-the-rtc)<br>
+Another good discussion of RTCs is [here](https://makezine.com/2019/01/18/getting-started-with-real-time-clocks/).
+
 
 ## Reading from the RTC
 
+**These Guides Have Extra Things That Aren't Needed**<br>
+[Guide from The Pi Hut on RTC](https://thepihut.com/blogs/raspberry-pi-tutorials/17209332-adding-a-real-time-clock-to-your-raspberry-pi) <br>
+[Adafruit - Adding a Real Time Clock to Raspberry Pi](https://learn.adafruit.com/adding-a-real-time-clock-to-raspberry-pi)
+[Pi My Life Up Guide](https://pimylifeup.com/raspberry-pi-rtc/)
+
 ### Reading from RTC Clock on Startup
-* **`sudo vim /boot/config.txt`** <br>
-Add the following to the bottom: 
+[Execellent tutorial from Adafruit](https://learn.adafruit.com/adding-a-real-time-clock-to-raspberry-pi/set-rtc-time)
+
+#### Option 1
+According to [this forum post](https://www.raspberrypi.org/forums/viewtopic.php?t=200891) all that is needed to set the Pi to read from a RTC is to add the following to the end of **`/boot/config.txt`:**<br>
+`dtoverlay=i2c-rtc,ds3231`
+
+#### Option 2
+* **`sudo vim /etc/modules`** <br>
+Add the following: `rtc-ds3231`
+* **`sudo vim /boot/config.txt`** Add the following to the bottom: 
 
 ```python
 # RTC
 dtoverlay=i2c-rtc,ds3231
 ```
+
+* `sudo reboot now`
+* `sudo apt-get -y remove fake-hwclock`
+* `sudo update-rc.d -f fake-hwclock remove`
+* `sudo systemctl disable fake-hwclock`
 * **`sudo vim /lib/udev/hwclock-set`** <br>
 Comment out the following:
 
@@ -27,13 +51,10 @@ if [ -e /run/systemd/system ] ; then
 exit 0
 fi
 ```
-<!--* `sudo reboot now` <br>-->
-* `sudo apt-get -y remove fake-hwclock` <br>
-* `sudo update-rc.d -f fake-hwclock remove` <br>
-* Read the from the hardware clock: `sudo hwclock --verbose -r` <br>
 * Set the hardware clock from system time: `sudo hwclock -s`
 * Turn off Network Time Protocol sync: `sudo timedatectl set-ntp false`
-* `sudo reboot now` <br>
+* Read the from the hardware clock: `sudo hwclock --verbose -r`
+* `sudo reboot now`
 
 ### Interference with Power On 
 
@@ -79,7 +100,8 @@ Set the system time based on the RTC at startup, then use `time.time()` to grab 
 |Get system time| `date`|
 |Set system time with in put|`date -s '2017-05-14'`|
 |Get plethora of info about system time settings|`timedatectl`|
-|Install nptdate|`sudo apt-get install ntpdate`|
+|Turn off auto setting time with Network Time Protocol|`sudo timedatectl set-ntp false`|
+|Install ntpdate|`sudo apt-get install ntpdate`|
 |Set Pi's system time to internet time| ` - `|
 |Checks to see if I2C device is connected|`sudo i2cdetect -y 1`|
 |Read date and time of the RTC|`sudo hwclock -r`|
