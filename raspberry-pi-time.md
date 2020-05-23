@@ -55,7 +55,49 @@ System clock synchronized: no
           RTC in local TZ: no
 ```
 
-#### Step 2
+#### Step 2 (Jordan made this)
+
+```python
+#!/usr/bin/env python3
+
+# Sets time on the DS3231 Real Time Clock
+# This has to be done upon setup of every new camera
+
+import os                       # For reading from bash script
+import time                     # For unix timestamps
+from datetime import datetime   # For printing readable time
+from typing import Tuple        # For cleaner code
+import busio                    # For interfacing with DS3231 Real Time Clock
+import adafruit_ds3231          # pip install adafruit-circuitpython-ds3231
+
+
+def main():
+    print("Getting time from hardware clock")
+    
+    # Get the hardware clock time
+    stream = os.popen('sudo hwclock -r')
+    hwclock = stream.read()
+    print("Hardware clock is:")
+    print(hwclock)
+    
+    # Set date from hardware clock time
+    os.popen('sudo date --set="{hwc}"'.format(hwc=hwclock))
+
+    stream = os.popen('date')
+    date = stream.read()
+    print("Date is now:")
+    print(date)
+
+    print("--- End program ---")
+
+
+if __name__ == "__main__":
+    main()
+```
+
+---
+
+#### Step 2 (This seems not to have worked)
 [Raspberry Pi Forum Post](https://www.raspberrypi.org/forums/viewtopic.php?f=44&t=16218&start=100) that shows how to create a service that forces the local time to be set by the RTC.
 
 Create and edit: **`/lib/systemd/system/hwclock-start.service`**
@@ -76,6 +118,23 @@ WantedBy=graphical.target multi-user.target
 
 Run `systemctl daemon-reload`
 Run `systemctl enable hwclock-start.service`
+
+#### Step 2 (Trying this on Camera #2)
+[Article](https://spellfoundry.com/sleepy-pi/accessing-real-time-clock-raspberry-pi/)
+
+```python
+/bin/bash -c "echo ds1374 0x68 > /sys/class/i2c-adapter/i2c-1/new_device"
+
+# No network, set the system time from the hw clock
+printf "\nSetting system time from hardware clock\n"
+/sbin/hwclock -s
+
+exit 0
+```
+
+#### Step 2 (Yet another method)
+[The forum with suggested method](https://forums.gentoo.org/viewtopic-p-8303064.html?sid=13124a28e941b192720360d75c46a527)
+
 
 ---
 

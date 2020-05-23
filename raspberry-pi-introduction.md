@@ -50,16 +50,24 @@ Once your in, you can navigate the RPi just like you would any Linux machine, us
 
 In case you are setting up a new RPi and running it in headless mode, [this website](https://howtoraspberrypi.com/how-to-raspberry-pi-headless-setup/) does a good job of explaining how you make a RPi connect to a WiFi network without ever requiring so much as a mouse or keyboard for the RPi itself. Handy if you’re working on a laptop and have no external keyboard/mouse or display available.
 
-### Connecting over VNC
+### [Connecting over VNC](https://www.raspberrypi.org/documentation/remote-access/vnc/)
 The RPi also has VNC software installed. In case you require the desktop environment of the RPi, but can't connect a display to it, you can use your own VNC software to connect to the RPi.
 
 1. On your laptop, download [`VNC Viewer`](https://www.realvnc.com/en/connect/download/viewer/). Note that unless you will need to be streaming your desktop, you just need VNC Viewer, not VNC Server. Also note that the titles on the VNC website make it confusing as to which program you're downloading.
 
-2. On the RPI open VNC server to _broadcast_ your RPi's desktop over the network.
+2. **Make sure VNC on RPi is up to date** <br>`sudo apt-get update` <br>
+`sudo apt-get install realvnc-vnc-server realvnc-vnc-viewer`
 
-3. On your laptop, VNC Viewer, enter the IP address of the RPi. This is like selecting a particular chanel on a TV. If you don't know your RPi's IP, [see above](#finding-rpi-ip-address)
+3. **Enable VNC Server graphically**<br>
+On your Raspberry Pi, boot into the graphical desktop.<br>
+Select Menu > Preferences > Raspberry Pi Configuration > Interfaces.
+Ensure VNC is Enabled.
 
-4. It should connect and you will be able to see the desktop of the RPi on your laptop.
+4. On your laptop, VNC Viewer, enter the IP address of the RPi. This is like selecting a particular chanel on a TV. If you don't know your RPi's IP, [see above](#finding-rpi-ip-address)
+
+5. It should connect and you will be able to see the desktop of the RPi on your laptop.
+
+6. If you have trouble connecting, particularly if you receive `VNC Server not currently listening for Cloud connections.` click on VNC in the menubar of the RPi. Then go to the hamburger menu and select **Licensing**, then login. <br> If that doesn't work, then go through this [check list](https://help.realvnc.com/hc/en-us/articles/360003474692-Why-is-VNC-Server-not-currently-listening-for-Cloud-connections-). 
 
 #### Connecting to Pi over Cloud (on VNC)
 Follow [this](https://lifehacker.com/how-to-control-a-raspberry-pi-remotely-from-anywhere-in-1792892937) instruction to create a VNC cloud account and list devices under the account to get cloud access to Pi from anywhere.
@@ -89,6 +97,12 @@ _Here's a few recommended programs consider installing_
 |xscreensaver | `sudo apt-get install xscreensaver`|
 
 ---
+
+### Locations of Things
+| What | Location |
+|--------|------------|
+|WiFi Passwords| `/etc/wpa_supplicant/wpa_supplicant.conf`|
+|Startup Services|`/lib/systemd/system/sample.service`|
 
 ### Update Python version
 All new projects should start with at least Python 3.7.x. If you aren't sure the version on your machine, you can run `python3 --version` to check.<br>
@@ -121,7 +135,7 @@ Run: `python3 ./foo.py`
 |Reboot|`sudo reboot`|
 |View python scripts running|`pgrep -af python`|
 |[Kill process](https://www.linux.com/learn/intro-to-linux/2017/5/how-kill-process-command-line)|`sudo kill -9 [pid]`|
-|[Set WiFi Network Passwords](https://www.raspberrypi.org/documentation/configuration/wireless/wireless-cli.md)|`sudo vim /etc/wpa_supplicant/wpa_supplicant.conf`|
+|[Set WiFi Network Passwords](https://www.raspberrypi.org/documentation/configuration/wireless/wireless-cli.md)|`sudo vim /etc/wpa_supplicant/wpa_supplicant.conf` <br> `wpa_cli -i wlan0 reconfigure`|
 
 
 ---

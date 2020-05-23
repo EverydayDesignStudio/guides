@@ -14,9 +14,10 @@ _A collection of setup guides, tutorials, and how-tos on and about our research 
 
 ### Raspberry Pi
 * **[Raspberry Pi Introduction](raspberry-pi-introduction.md)**
+* **[Setup a new Raspberry Pi](setup-new-raspberry-pi.md)**
 * **[Setup eduroam on Raspberry Pi 3](setup-eduroam-raspberry-pi-3.md)**
 * **[Raspberry Pi Advanced](raspberry-advanced.md)**
-* **[Running code when the Raspberry pi starts up](script-on-startup.md)**
+* **[Running code on Raspberry Pi startup](script-on-startup.md)**
 
 ### Python
 * **[Python](python.md)**
